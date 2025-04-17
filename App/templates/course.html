@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course & Materials</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: #f4f4f4;
+            padding: 20px;
+            position: relative;
+        }
+        .header {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .course-container {
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+        }
+        .course-container h2 {
+            margin-bottom: 20px;
+        }
+        .search-box {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .search-box input {
+            width: 80%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .course-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .course-item {
+            background: black;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .course-item a {
+            text-decoration: none;
+            color: gold;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        function searchCourses() {
+            let input = document.getElementById("searchInput").value.toLowerCase();
+            let courses = document.getElementsByClassName("course-item");
+            
+            for (let i = 0; i < courses.length; i++) {
+                let courseName = courses[i].getElementsByTagName("span")[0].innerText.toLowerCase();
+                if (courseName.includes(input)) {
+                    courses[i].style.display = "flex";
+                } else {
+                    courses[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="header">Course & Materials Management</div>
+    <div class="course-container">
+        <h2>Course & Materials</h2>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search courses..." onkeyup="searchCourses()">
+        </div>
+        <div class="course-list">
+            <div class="course-item"><span>C language</span><a href="#">Download Material</a></div>
+            <div class="course-item"><span>C++ language</span><a href="#">Download Material</a></div>
+            <div class="course-item"><span>Java</span><a href="#">Download Material</a></div>
+            <div class="course-item"><span>Python </span><a href="#">Download Material</a></div>
+            <div class="course-item"><span>Java script</span><a href="#">Download Material</a></div>
+            <div class="course-item"><span>Data Base and Management System</span><a href="#">Download Material</a></div>
+            <div class="course-item"><span>Data Structure Through C</span><a href="#">Download Material</a></div>
+            <div class="course-item"><span>Operating System</span><a href="#">Download Material</a></div>
+            <div class="course-item"><span>Software Engineering</span><a href="#">Download Material</a></div>
+            <div class="course-item"><span>Django</span><a href="#">Download Material</a></div>
+            <div class="course-item"><span>Python Programming for Beginners</span><a href="#">Download Material</a></div>
+            <div class="course-item"><span>Full-Stack Web Development Bootcamp</span><a href="#">Download Material</a></div>
+            <div class="course-item"><span>Introduction to Data Science with Python</span><a href="#">Download Material</a></div>
+            <div class="course-item"><span>Machine Learning Essentials</span><a href="#">Download Material</a></div>
+            <div class="course-item"><span>Cybersecurity Fundamental</span><a href="#">Download Material</a></div>
+            <div class="course-item"><span>Frontend Development with React.js</span><a href="#">Download Material</a></div>
+            <div class="course-item"><span>AI for Everyone: Demystifying Artificial Intelligence</span><a href="#">Download Material</a></div>
+            <div class="course-item"><span>Digital Marketing Mastery</span><a href="#">Download Material</a></div>
+            <div class="course-item"><span>Start Your Own Online Business</span><a href="#">Download Material</a></div>
+            <div class="course-item"><span>Social Media Marketing Strategies</span><a href="#">Download Material</a></div>
+            <div class="course-item"><span>Business Analytics with Excel</span><a href="#">Download Material</a></div>
+            <div class="course-item"><span>Financial Planning and Investment Basics</span><a href="#">Download Material</a></div>
+            <div class="course-item"><span>Leadership & Team Management Essentials</span><a href="#">Download Material</a></div>
+            <div class="course-item"><span>Personal Branding and Career Growth</span><a href="#">Download Material</a></div>
+            <div class="course-item"><span>Graphic Design with Canva & Photoshop</span><a href="#">Download Material</a></div>
+            <div class="course-item"><span>Photography Essentials: From Beginner to Pro</span><a href="#">Download Material</a></div>
+            <div class="course-item"><span>Video Editing with Adobe Premiere Pro</span><a href="#">Download Material</a></div>
+            <div class="course-item"><span>Creative Writing for Beginners</span><a href="#">Download Material</a></div>
+            <div class="course-item"><span>Mindfulness and Stress Management</span><a href="#">Download Material</a></div>
+            <div class="course-item"><span>Public Speaking and Communication Skills</span><a href="#">Download Material</a></div>
+            <div class="course-item"><span>Learning a New Language: Spanish for Beginners</span><a href="#">Download Material</a></div>
+        </div>
+    </div>
+</body>
+</html>

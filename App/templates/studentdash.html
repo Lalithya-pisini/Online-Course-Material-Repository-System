@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: #f4f4f4;
+            padding: 20px;
+        }
+        .header {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            align-self: flex-start;
+        }
+        .stats {
+            display: grid;
+            grid-template-areas: 
+                "users courses"
+                "downloaders downloaders";
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+        .stat-card {
+            background: black;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            font-size: 18px;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+        }
+        .stat-card p {
+            font-size: 30px;
+            font-weight: bold;
+            margin-top: 10px;
+            color: gold;
+        }
+        .stat-card:nth-child(1) { grid-area: users; }
+        .stat-card:nth-child(2) { grid-area: courses; }
+        .stat-card:nth-child(3) { grid-area: downloaders; }
+    </style>
+</head>
+<body>
+    <div class="header">Student Dashboard</div>
+    <div class="stats">
+        <div class="stat-card">
+            <h3>Number of Courses Enrolled</h3>
+            <p>150</p>
+        </div>
+        <div class="stat-card">
+            <h3>Number of Courses Finished</h3>
+            <p>45</p>
+        </div>
+        <div class="stat-card">
+            <h3>Total Downloaders</h3>
+            <p>120</p>
+        </div>
+    </div>
+</body>
+</html>
